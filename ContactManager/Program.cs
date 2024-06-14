@@ -5,10 +5,9 @@
         private static List<string> contacts = new List<string>();
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
             ContactsManager();
+            Console.ReadKey();
         }
-
 
         public static void ContactsManager()
         {
@@ -42,10 +41,7 @@
             Console.ResetColor();
 
             PrintAllContacts();
-
-
         }
-
 
         public static List<string> AddContact(string contact)
         {
@@ -69,7 +65,6 @@
             return contacts;
         }
 
-
         public static List<string> RemoveContact(string contact)
         {
             if (contacts.Contains(contact))
@@ -82,10 +77,8 @@
                 Console.WriteLine($"\nWarning: No one who has this name --> {contact}");
                 Console.ResetColor();
             }
-
             return contacts;
         }
-
 
         public static List<string> ViewAllContacts()
         {
